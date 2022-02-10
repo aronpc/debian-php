@@ -4,8 +4,7 @@ set -e
 
 REPONAME="aronpc/debian-php"
 LATEST_VERSION="8.1"
-# 7.2 7.4 8.0 8.1-rc
-for TAG in 7.2 7.4 8.0 8.1 ; do
+for TAG in 7.4 8.0 8.1 ; do
 	FPM_IMAGE_NAME="${REPONAME}:$TAG-fpm"
 	DOCKERFILE=Dockerfile.fpm
 	if [[ "$TAG" == "8.1" ]] ; then
